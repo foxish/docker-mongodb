@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  labels:
+    name: mongodb
+  name: mongo-data
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  gcePersistentDisk:
+    pdName: mongo-data
+    fsType: ext4

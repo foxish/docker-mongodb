@@ -16,4 +16,5 @@ spec:
           name: data
   volumes:
     - name: data
-      emptyDir: {}
+      persistentVolumeClaim:
+        claimName: mongo-data
